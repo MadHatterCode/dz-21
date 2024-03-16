@@ -1,6 +1,6 @@
 def popular_words(text, words):
     l_text = text.lower()
-    word_counts = {}.fromkeys(words, 0)
+    word_counts = {word.lower(): 0 for word in words}
     for word in l_text.split():
         if word in word_counts:
             word_counts[word] += 1
